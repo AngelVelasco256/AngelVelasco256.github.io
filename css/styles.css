@@ -1,0 +1,20 @@
+:root {
+    --primary-color: #44026c;
+    --secondary-color: #51002c;
+    --accent-color: #f7f3ea;
+    --background-color: #150b21;
+}
+
+@font-face {
+    font-family: 'AngelFont';
+    src: url("/assets/fonts/MajorMonoDisplay-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: 'AngelFont';
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: lighter;
+}
