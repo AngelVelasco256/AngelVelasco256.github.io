@@ -5,16 +5,37 @@
     --background-color: #150b21;
 }
 
-@font-face {
-    font-family: 'AngelFont';
-    src: url("/assets/fonts/MajorMonoDisplay-Regular.ttf") format("truetype");
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
-body {
-    font-family: 'AngelFont';
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100dvh;
+    /*background-color: var(--background-color);*/
 }
 
 h1 {
-    font-size: 80px;
-    font-weight: lighter;
+    font-size: 160px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.glassshape {
+    width: 750px;
+    height: 750px;
 }
