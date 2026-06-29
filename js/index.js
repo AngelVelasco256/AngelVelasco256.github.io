@@ -1,11 +1,12 @@
-var corner1 = '[]\n  []\n    []'
-var corner2 = '    []\n  []\n[]'
-var corner3 = '    []\n  []\n[]'
-var corner4 = '[]\n  []\n    []\n'
+// addEventListener('click', switchClass);
+//
+// function switchClass() {
+//     console.log(document.getElementsByClassName('my-work'));
+// }
 
-var borderTop = '[][][][][][][][][][]'
-var borderBottom = '[][][][][][][][][][]'
-var borderRigth = '[]\n[]\n[]\n[]\n[]\n[]\n[]\n[]\n[]\n[]'
-var borderLeft = '[]\n[]\n[]\n[]\n[]\n[]\n[]\n[]\n[]'
-
-console.log(borderTop,corner1);
+document.addEventListener("DOMContentLoaded", () => {
+document.getElementById('navbar').addEventListener("click", (e) => {
+    const item = e.target.closest('a')
+    console.log("item clickeado", item.dataset.item)
+});
+});

@@ -1,14 +1,26 @@
 :root {
     --primary-color: #44026c;
-    --secondary-color: #51002c;
+    --secondary-color: #C76DF5;
     --accent-color: #f7f3ea;
-    --background-color: #150b21;
+    --background-color: rgb(65 24 136 / 0.68);
+}
+
+@font-face {
+    font-family: Ketona;
+    src: url("../assets/fonts/Allomira-Medium.ttf");
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    font-family: Ketona;
+    background-image: linear-gradient(350deg, var(--accent-color) 13%, var(--background-color) 67%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 nav {
@@ -16,6 +28,20 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     font-size: 40px;
+    height: 60px;
+    margin: 12px 60px;
+}
+
+nav > div a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+nav > div a:hover {
+    background: linear-gradient(180deg, var(--accent-color) 50%, rgb(228 0 255), rgb(170 0 220), rgb(148 1 166), rgb(116 2 130));
+    background-clip: text;
+    color: transparent;
+    transition: 700ms;
 }
 
 main {
@@ -23,19 +49,48 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 100dvh;
-    /*background-color: var(--background-color);*/
+    margin: 0 60px;
+    flex: 1;
 }
 
-h1 {
-    font-size: 160px;
+.title {
+    font-size: 200px;
+    filter: blur(1px);
+    color: var(--accent-color);
+    letter-spacing: 6px;
 }
 
-h2 {
+.subtitle {
     font-size: 40px;
+    color: var(--accent-color);
+}
+
+.right {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
 .glassshape {
-    width: 750px;
+    object-fit: fill;
     height: 750px;
+    filter: blur(2px);
+    animation-name: rotate;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.my-work {
+
 }
