@@ -2,6 +2,17 @@
     --background-color: #D2D0C2;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
 @font-face {
     font-family: "LeagueSpartan";
     src: url("../assets/fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
@@ -13,44 +24,49 @@ body {
 }
 
 .navbar {
-    width: 92%;
-    margin: 0 auto;
+    width: 100%;
+    height: 80px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    position: relative;
+    z-index: 2;
+    background-color: var(--background-color);
 }
 
 .logo {
-    width: 200px;
-    height: 100px;
+    width: 40%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
+
+}
+
+.logo a {
+    width: auto;
+    height: 100%;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.logo a img {
+    width: 80%;
+    height: 80%;
 }
 
 .logo p {
-    margin: 0;
-    font-size: 26px;
-    font-weight: bold;
     color: #4153A3;
-    text-shadow: 1px 1px rgb(105 122 219);
+    font-weight: bold;
+    margin: auto 0;
+    font-size: 24px;
 }
 
-a {
-    text-decoration: none;
-}
-
-.elipse {
-    width: 100%;
+.menu_icon {
+    width: 10%;
     height: 100%;
 }
 
-.links > a {
-    color: #4153A3;
-    font-size: 16px;
-    font-weight: bold;
-
+.links {
+    display: none;
 }
 
 .line {
@@ -58,111 +74,100 @@ a {
     border: 1px solid #1A1A18;
 }
 
-/*MAIN section*/
-.container {
-    /*background-color: #ff8585;*/
-    height: 900px;
-    position: relative;
-    margin-top: 16px;
-}
+/* ---------------------------------------------------
+    Section main
+--------------------------------------------------- */
 
-.pattern {
-    width: 350px;
-    position: absolute;
+.main {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    width: min(100%, calc((100dvh - 80px) * 9 / 16));
+    margin-inline: auto;
+    container-type: inline-size;
 }
 
 .left {
-    top: 0%;
-    left: 0%;
+    position: absolute;
+    width: 40cqw;
+    height: 58cqw;
+    left: 0;
+    top: -11%;
 }
 
 .rigth {
-    bottom: 44%;
-    right: 0%;
+    /*display: none;*/
+    position: absolute;
+    width: 40cqw;
+    height: 58cqw;
+    right: 0;
+    top: 83%;
 }
 
 .short-line {
-    width: 32%;
-    height: 75px;
-    /*background-color: #1A1A18;*/
     position: absolute;
-    top: 24%;
-    left: 5%;
+    width: 71cqw;
+    height: 3.2%;
+    top: 19cqw;
+    left: 0;
 }
 
-.line {
-    width: 100%;
-}
-
-.subtittle {
-    font-size: 80px;
-    font-weight: normal;
-    top: 8%;
+.title {
     position: absolute;
-    left: 5%;
+    left: 1.2cqw;
+    top: 18%;
+    width: 60%;
+    text-align: left;
+    font-weight: bold;
     color: #4153A3;
-}
-
-.lema {
-    font-size: 24px;
-    top: 30%;
-    position: absolute;
-    left: 5%;
-    color: #4153A3;
+    z-index: 1;
+    text-shadow: -0.7cqw -0.7cqw rgb(65 83 163 / 0.7),
+    -1.4cqw -1.4cqw rgb(65 83 163 / 0.5);
+    font-size: 20cqw;
 }
 
 .horizon-lines {
+    width: 80%;
     position: absolute;
-    top: 60%;
-    width: 50%;
-    height: 200px;
-}
-
-.tittle {
-    position: absolute;
-    top: 25%;
-    left: 33%;
-    font-size: 180px;
-    font-weight: bold;
-    color: #4153A3;
-    z-index: 1;
-    text-align: right;
-    text-shadow: -4px -4px rgb(65 83 163 / 0.7),
-    -8px -8px rgb(65 83 163 / 0.5);
-}
-
-.tittle2 {
-    position: absolute;
-    top: 40%;
-    left: 53%;
-    font-size: 180px;
-    font-weight: bold;
-    color: #4153A3;
-    text-shadow: -4px -4px rgb(65 83 163 / 0.7),
-    -8px -8px rgb(65 83 163 / 0.5);
-    z-index: 1;
-}
-
-.name {
-    position: absolute;
-    top: 55%;
-    left: 19%;
-    font-size: 40px;
+    top: 82%;
 }
 
 .elipse-main {
+    width: 62cqw;
+    height: 60cqw;
     position: absolute;
-    width: 600px;
-    height: 600px;
-    top: 15%;
-    left: 70%;
+    right: 0;
+    top: 29%;
 }
 
+/*!**/
+/*------------------------------------------------------*/
+/*    Elementos ocultos (Version alternativa)*/
+/*------------------------------------------------------*/
+/**!*/
+
+.name {
+    display: none;
+}
+
+/*!**/
+/*------------------------------------------------------*/
+/**!*/
+
 .cursor {
-    width: 300px;
-    height: 300px;
-    z-index: 2;
     position: absolute;
-    top: 55%;
-    left: 75%;
+    top: 52%;
+    right: 2%;
+    height: 30cqw;
+}
+
+.subtitle {
+    position: absolute;
+    top: 64%;
+    font-size: 9cqw;
+}
+
+.lema {
+    position: absolute;
+    top: 71%;
+    font-size: 5cqw;
 }
