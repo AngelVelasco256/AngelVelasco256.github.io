@@ -20,7 +20,7 @@ img {
 
 body {
     background-color: var(--background-color);
-    font-family: LeagueSpartan;
+    font-family: LeagueSpartan, serif;
 }
 
 .navbar {
@@ -95,7 +95,6 @@ body {
 }
 
 .rigth {
-    /*display: none;*/
     position: absolute;
     width: 40cqw;
     height: 58cqw;
@@ -170,4 +169,29 @@ body {
     position: absolute;
     top: 71%;
     font-size: 5cqw;
+}
+
+.blog_title {
+    margin: 100px auto 0 auto;
+    font-size: 48px;
+    width: 90%;
+}
+
+.blog_subtitle {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.blog_p {
+    width: 90%;
+    margin: 32px auto;
+    text-align: justify;
+}
+
+.rigth-side {
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
 }
